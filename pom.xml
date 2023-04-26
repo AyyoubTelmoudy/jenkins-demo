@@ -48,6 +48,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>jenkins-demo</finalName>
 	</build>
 
 </project>
