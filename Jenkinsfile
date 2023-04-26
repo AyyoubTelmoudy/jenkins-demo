@@ -22,11 +22,5 @@ pipeline {
 				sh "mvn test"
 			}
 		}
-
-		stage('Deploy') {
-			steps {
-			    sh "mvn -s /root/.m2/settings.xml jar:jar deploy:deploy"
-			}
-		}
 	}
 }
