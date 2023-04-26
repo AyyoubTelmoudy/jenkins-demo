@@ -22,5 +22,13 @@ pipeline {
 				bat "mvn test"
 			}
 		}
+		stage('Dockerize'){
+            steps {
+                  script {
+                        docker.build("jenkins-demo:${env.BUILD_NUMBER}", "-f Dockerfile .")
+                        docker.image("jenkins-demo:${env.BUILD_NUMBER}").run("-p 6565:6565")
+                         }
+                  }
+        }
 	}
 }
