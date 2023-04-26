@@ -14,6 +14,9 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		logger.info("Application executed ....");
+		logger.info("***********************************");
+		logger.info("Application executed secondly ....");
+		logger.info("***********************************");
 	}
 	@PostConstruct
 	public void init()
